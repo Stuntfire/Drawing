@@ -9,5 +9,6 @@ namespace Drawing
 {
     interface IDraw
     {
+
     }
 }
