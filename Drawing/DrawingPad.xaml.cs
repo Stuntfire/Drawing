@@ -46,5 +46,10 @@ namespace Drawing
                 colorSquare.SetColor(Colors.BlueViolet);
             }
         }
+
+        private void drawingCanvas_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+
+        }
     }
 }
