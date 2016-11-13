@@ -16,5 +16,24 @@ namespace Drawing
         private int sideLength;
         private int locX = 0, locY = 0;
         private Rectangle rect = null;
+
+        public Square(int sideLength)
+        {
+            this.sideLength = sideLength;
+        }
+
+        void IDraw.SetLocation(int xCoord, int yCoord)
+        {
+            this.locX = xCoord;
+            this.locX = yCoord;
+        }
+
+        void IDraw.Draw(Canvas canvas)
+        {
+            if (this.rect != null)
+            {
+                SolidColorBrush brush = new SolidColorBrush(color);
+            }
+        }
     }
 }
