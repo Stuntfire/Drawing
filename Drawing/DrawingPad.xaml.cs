@@ -49,7 +49,21 @@ namespace Drawing
 
         private void drawingCanvas_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
+            Point mouseLocation = e.GetPosition(this.drawingCanvas);
+            Circle myCircle = new Circle(100);
 
+            if (myCircle is IDraw)
+            {
+                IDraw drawCircle = myCircle;
+                drawCircle.SetLocation((int)mouseLocation.X, (int)mouseLocation.Y);
+                drawCircle.Draw(drawingCanvas);
+            }
+
+            if (myCircle is IColor)
+            {
+                IColor colorSquare = myCircle;
+                colorSquare.SetColor(Colors.HotPink);
+            }
         }
     }
 }

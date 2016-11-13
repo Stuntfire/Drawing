@@ -25,7 +25,7 @@ namespace Drawing
         void IDraw.SetLocation(int xCoord, int yCoord)
         {
             this.locX = xCoord;
-            this.locX = yCoord;
+            this.locY = yCoord;
         }
 
         void IDraw.Draw(Canvas canvas)
