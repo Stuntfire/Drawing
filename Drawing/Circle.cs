@@ -15,5 +15,10 @@ namespace Drawing
         private int diameter;
         private int locX = 0, locY = 0;
         private Ellipse circle = null;
+
+        public Circle(int diameter)
+        {
+            this.diameter = diameter;
+        }
     }
 }
