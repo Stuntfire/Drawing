@@ -32,8 +32,28 @@ namespace Drawing
         {
             if (this.rect != null)
             {
-                SolidColorBrush brush = new SolidColorBrush(color);
+                canvas.Children.Remove(this.rect);
             }
+            else
+            {
+                this.rect = new Rectangle();
+            }
+
+            this.rect.Height = this.sideLength;
+            this.rect.Width = this.sideLength;
+            Canvas.SetTop(this.rect, this.locY);
+            Canvas.SetLeft(this.rect, this.locX);
+            canvas.Children.Add(this.rect);
+        }
+
+        void IColor.SetColor(Color color)
+        {
+            if (this.rect != null)
+            {
+                SolidColorBrush brush = new SolidColorBrush(color);
+                this.rect.Fill = brush;
+            }
+
         }
     }
 }
